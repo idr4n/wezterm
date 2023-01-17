@@ -11,6 +11,9 @@ schemeZenbonesLight.cursor_bg = "#9775FA"
 -- customize tokyonight
 local schemeTokyoNight = wezterm.get_builtin_color_schemes()["tokyonight"]
 schemeTokyoNight.split = "#000000"
+-- customize Sonokai
+local schemeSonokai = wezterm.get_builtin_color_schemes()["Sonokai (Gogh)"]
+schemeSonokai.cursor_fg = "#2C2E34"
 -- customize Catppuccin
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
 catppuccinMacchiato.split = "#000000"
@@ -32,21 +35,30 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
 		-- return "zenbones_dark custom"
-		-- return "tokyonight"
 		-- return "tokyonight custom"
+		-- return "tokyonight-storm"
+		return "tokyonight-moon"
 		-- return "kanagawabones"
 		-- return "duskfox"
-		return "Rosé Pine (base16)"
+		-- return "nordfox"
+		-- return "Rosé Pine (base16)"
+		-- return "Rosé Pine Moon (base16)"
 		-- return "Catppuccin Macchiato"
+		-- return "Catppuccin Frappe"
+		-- return "sonokai custom"
 	else
 		-- return "zenbones_light custom"
 		-- return "dawnfox"
 		-- return "nordfox"
 		-- return "tokyonight custom"
-		-- return "kanagawabones"
 		-- return "tokyonight-storm"
-		return "Rosé Pine Moon (base16)"
+		return "tokyonight-moon"
+		-- return "kanagawabones"
+		-- return "Rosé Pine Moon (base16)"
+		-- return "Rosé Pine Dawn (base16)"
 		-- return "Catppuccin Frappe"
+		-- return "Catppuccin Macchiato"
+		-- return "sonokai custom"
 	end
 end
 
@@ -73,7 +85,7 @@ return {
 	initial_rows = 26,
 	initial_cols = 110,
 	-- window_close_confirmation = "NeverPrompt",
-	window_background_opacity = 0.93,
+	window_background_opacity = 0.98,
 	-- window_background_opacity = 0.90,
 	inactive_pane_hsb = {}, -- don't dim inactive panes
 	send_composed_key_when_left_alt_is_pressed = false,
@@ -117,6 +129,7 @@ return {
 		["Catppuccin Macchiato"] = catppuccinMacchiato,
 		["Catppuccin Frappe"] = catppuccinFrappe,
 		["tokyonight custom"] = schemeTokyoNight,
+		["sonokai custom"] = schemeSonokai,
 	},
 	color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 }
