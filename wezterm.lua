@@ -8,6 +8,9 @@ schemeZenbonesDark.background = "#171210"
 local schemeZenbonesLight = wezterm.get_builtin_color_schemes()["zenbones_light"]
 schemeZenbonesLight.background = "#F8F6F5"
 schemeZenbonesLight.cursor_bg = "#9775FA"
+local schemeGithubLight = wezterm.get_builtin_color_schemes()["Github (base16)"]
+schemeGithubLight.cursor_fg = "#24292F"
+schemeGithubLight.cursor_bg = "#9775FA"
 -- customize Catppuccin
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
 catppuccinMacchiato.split = "#000000"
@@ -41,7 +44,7 @@ local function scheme_for_appearance(appearance)
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        return "Github (base16)"
+        return "Github Light"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
         -- return "Catppuccin Frappe"
@@ -135,6 +138,7 @@ return {
         ["zenbones_light custom"] = schemeZenbonesLight,
         ["Catppuccin Macchiato"] = catppuccinMacchiato,
         ["Catppuccin Frappe"] = catppuccinFrappe,
+        ["Github Light"] = schemeGithubLight,
     },
     color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 }
