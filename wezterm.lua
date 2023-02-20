@@ -11,6 +11,7 @@ schemeZenbonesLight.cursor_bg = "#9775FA"
 local schemeGithubLight = wezterm.get_builtin_color_schemes()["Github (base16)"]
 schemeGithubLight.cursor_fg = "#24292F"
 schemeGithubLight.cursor_bg = "#9775FA"
+schemeGithubLight.cursor_border = "#9775FA"
 -- customize Catppuccin
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
 catppuccinMacchiato.split = "#000000"
