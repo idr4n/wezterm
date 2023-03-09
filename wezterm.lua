@@ -38,7 +38,8 @@ local function scheme_for_appearance(appearance)
         -- return "nordfox"
         -- return "Rosé Pine (base16)"
         -- return "Rosé Pine Moon (base16)"
-        return "Catppuccin Macchiato"
+        -- return "Catppuccin Macchiato"
+        return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
     else
         -- return "zenbones_light custom"
