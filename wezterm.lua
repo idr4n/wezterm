@@ -99,20 +99,21 @@ return {
     -- Font config
     cursor_thickness = 3,
     -- this is for FiraCode
-    font_size = 16,
-    line_height = 1.21,
+    -- font_size = 16,
+    -- line_height = 1.18,
+    -- this is for Liga SFMono
+    -- line_height = 1.21,
     -- this is for Monolisa
-    -- font_size = 15.5,
-    -- line_height = 1.05,
-    -- line_height = 1.08,
+    font_size = 15.5,
+    line_height = 1.08,
     term = "wezterm",
     -- font = wezterm.font("Monolisa Custom"),
     -- font = wezterm.font("Monolisa Custom", { weight = "Light" }),
     -- font = wezterm.font_with_fallback({ { family = "Monolisa Custom", weight = "Light" }, "nonicons" }),
     font = wezterm.font_with_fallback({
         -- { family = "MonolisaCustom Nerd Font", weight = "Light" },
-        -- { family = "MonolisaLight Nerd Font" },
-        { family = "Liga SFMono Nerd Font", weight = "Light" },
+        { family = "MonolisaLight Nerd Font" },
+        -- { family = "Liga SFMono Nerd Font", weight = "Light" },
         -- { family = "MonolisaCustom Nerd Font", weight = "Regular" },
         -- { family = "Symbols Nerd Font Mono", scale = 0.8 },
     }),
