@@ -104,8 +104,8 @@ return {
     -- this is for Liga SFMono
     -- line_height = 1.21,
     -- this is for Monolisa
-    font_size = 15.5,
-    line_height = 1.08,
+    font_size = 15,
+    line_height = 1.12,
     term = "wezterm",
     -- font = wezterm.font("Monolisa Custom"),
     -- font = wezterm.font("Monolisa Custom", { weight = "Light" }),
