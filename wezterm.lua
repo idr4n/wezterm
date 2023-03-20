@@ -33,13 +33,13 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         -- return "zenbones_dark custom"
-        -- return "tokyonight-moon"
+        return "tokyonight-moon"
         -- return "duskfox"
         -- return "nordfox"
         -- return "Rosé Pine (base16)"
         -- return "Rosé Pine Moon (base16)"
         -- return "Catppuccin Macchiato"
-        return "Oxocarbon Dark"
+        -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
     else
         -- return "zenbones_light custom"
