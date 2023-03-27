@@ -46,26 +46,28 @@ local function scheme_for_appearance(appearance)
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        return "Github Light"
+        -- return "Github Light"
         -- return "Oxocarbon Dark"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
-        -- return "Catppuccin Frappe"
+        return "Catppuccin Frappe"
         -- return "Catppuccin Macchiato"
     end
 end
 
-local function autoThemeOptions(appearance)
-    if appearance:find("Dark") then
-        return {
-            win_opacity = 0.98,
-        }
-    else
-        return {
-            win_opacity = 1,
-        }
-    end
-end
+-- local function autoThemeOptions(appearance)
+--     if appearance:find("Dark") then
+--         return {
+--             win_opacity = 0.97,
+--             win_background_blur = 15,
+--         }
+--     else
+--         return {
+--             win_opacity = 0.95,
+--             win_background_blur = 20,
+--         }
+--     end
+-- end
 
 -- A helper function for my fallback fonts
 local function font_with_fallback(name, params)
@@ -90,7 +92,10 @@ return {
     initial_rows = 26,
     initial_cols = 110,
     -- window_close_confirmation = "NeverPrompt",
-    window_background_opacity = autoThemeOptions(wezterm.gui.get_appearance()).win_opacity,
+    -- window_background_opacity = autoThemeOptions(wezterm.gui.get_appearance()).win_opacity,
+    -- macos_window_background_blur = autoThemeOptions(wezterm.gui.get_appearance()).win_background_blur,
+    window_background_opacity = 0.97,
+    macos_window_background_blur = 10,
     inactive_pane_hsb = {}, -- don't dim inactive panes
     send_composed_key_when_left_alt_is_pressed = false,
     send_composed_key_when_right_alt_is_pressed = false,
