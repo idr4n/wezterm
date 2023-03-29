@@ -8,10 +8,15 @@ schemeZenbonesDark.background = "#171210"
 local schemeZenbonesLight = wezterm.get_builtin_color_schemes()["zenbones_light"]
 schemeZenbonesLight.background = "#F8F6F5"
 schemeZenbonesLight.cursor_bg = "#9775FA"
+-- customize GithubLight
 local schemeGithubLight = wezterm.get_builtin_color_schemes()["Github (base16)"]
 schemeGithubLight.cursor_fg = "#24292F"
 schemeGithubLight.cursor_bg = "#9775FA"
 schemeGithubLight.cursor_border = "#9775FA"
+-- customize Monokai-pro
+local schemeMonokaiPro = wezterm.get_builtin_color_schemes()["Monokai (base16)"]
+schemeMonokaiPro.background = "#2D2A2E"
+schemeMonokaiPro.cursor_fg = "#2D2A2E"
 -- customize Catppuccin
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
 catppuccinMacchiato.split = "#000000"
@@ -33,7 +38,7 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         -- return "zenbones_dark custom"
-        return "tokyonight-moon"
+        -- return "tokyonight-moon"
         -- return "duskfox"
         -- return "nordfox"
         -- return "Rosé Pine (base16)"
@@ -41,6 +46,7 @@ local function scheme_for_appearance(appearance)
         -- return "Catppuccin Macchiato"
         -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
+        return "Monokai (base16)"
     else
         -- return "zenbones_light custom"
         -- return "dawnfox"
@@ -50,7 +56,8 @@ local function scheme_for_appearance(appearance)
         -- return "Oxocarbon Dark"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
-        return "Catppuccin Frappe"
+        -- return "Catppuccin Frappe"
+        return "Monokai (base16)"
         -- return "Catppuccin Macchiato"
     end
 end
@@ -116,8 +123,9 @@ return {
     -- font = wezterm.font("Monolisa Custom", { weight = "Light" }),
     -- font = wezterm.font_with_fallback({ { family = "Monolisa Custom", weight = "Light" }, "nonicons" }),
     font = wezterm.font_with_fallback({
+        { family = "Monolisa", weight = "Light" },
         -- { family = "MonolisaCustom Nerd Font", weight = "Light" },
-        { family = "MonolisaLight Nerd Font" },
+        -- { family = "MonolisaLight Nerd Font" },
         -- { family = "Liga SFMono Nerd Font", weight = "Light" },
         -- { family = "MonolisaCustom Nerd Font", weight = "Regular" },
         -- { family = "Symbols Nerd Font Mono", scale = 0.8 },
@@ -149,6 +157,7 @@ return {
         ["Catppuccin Macchiato"] = catppuccinMacchiato,
         ["Catppuccin Frappe"] = catppuccinFrappe,
         ["Github Light"] = schemeGithubLight,
+        ["Monokai (base16)"] = schemeMonokaiPro,
     },
     color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 }
