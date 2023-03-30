@@ -17,6 +17,7 @@ schemeGithubLight.cursor_border = "#9775FA"
 local schemeMonokaiPro = wezterm.get_builtin_color_schemes()["Monokai (base16)"]
 schemeMonokaiPro.background = "#2D2A2E"
 schemeMonokaiPro.cursor_fg = "#2D2A2E"
+schemeMonokaiPro.cursor_bg = "#FFC22D"
 -- customize Catppuccin
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
 catppuccinMacchiato.split = "#000000"
@@ -38,7 +39,7 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         -- return "zenbones_dark custom"
-        -- return "tokyonight-moon"
+        return "tokyonight-moon"
         -- return "duskfox"
         -- return "nordfox"
         -- return "Rosé Pine (base16)"
@@ -46,7 +47,7 @@ local function scheme_for_appearance(appearance)
         -- return "Catppuccin Macchiato"
         -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
-        return "Monokai (base16)"
+        -- return "Monokai (base16)"
     else
         -- return "zenbones_light custom"
         -- return "dawnfox"
@@ -157,7 +158,8 @@ return {
         ["Catppuccin Macchiato"] = catppuccinMacchiato,
         ["Catppuccin Frappe"] = catppuccinFrappe,
         ["Github Light"] = schemeGithubLight,
-        ["Monokai (base16)"] = schemeMonokaiPro,
+        -- ["Monokai (base16)"] = schemeMonokaiPro,
+        ["tokyonight_moon"] = schemeMonokaiPro,
     },
     color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 }
