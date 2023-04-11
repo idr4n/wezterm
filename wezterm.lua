@@ -10,14 +10,14 @@ schemeZenbonesLight.background = "#F8F6F5"
 schemeZenbonesLight.cursor_bg = "#9775FA"
 -- customize GithubLight
 local schemeGithubLight = wezterm.get_builtin_color_schemes()["Github (base16)"]
-schemeGithubLight.cursor_fg = "#24292F"
-schemeGithubLight.cursor_bg = "#9775FA"
-schemeGithubLight.cursor_border = "#9775FA"
+-- schemeGithubLight.cursor_fg = "#24292F"
+-- schemeGithubLight.cursor_bg = "#9775FA"
+-- schemeGithubLight.cursor_border = "#9775FA"
 -- customize Monokai-pro
 local schemeMonokaiPro = wezterm.get_builtin_color_schemes()["Monokai (base16)"]
-schemeMonokaiPro.background = "#2D2A2E"
-schemeMonokaiPro.cursor_fg = "#2D2A2E"
-schemeMonokaiPro.cursor_bg = "#FFC22D"
+schemeMonokaiPro.background = "#121212"
+-- schemeMonokaiPro.cursor_fg = "#2D2A2E"
+-- schemeMonokaiPro.cursor_bg = "#FFC22D"
 -- customize Catppuccin
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
 catppuccinMacchiato.split = "#000000"
@@ -39,7 +39,7 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         -- return "zenbones_dark custom"
-        return "tokyonight-moon"
+        -- return "tokyonight-moon"
         -- return "duskfox"
         -- return "nordfox"
         -- return "Rosé Pine (base16)"
@@ -47,35 +47,38 @@ local function scheme_for_appearance(appearance)
         -- return "Catppuccin Macchiato"
         -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
-        -- return "Monokai (base16)"
+        return "Monokai (base16)"
     else
         -- return "zenbones_light custom"
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        -- return "Github Light"
+        return "Github Light"
         -- return "Oxocarbon Dark"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
         -- return "Catppuccin Frappe"
-        return "Monokai (base16)"
+        -- return "Monokai (base16)"
         -- return "Catppuccin Macchiato"
     end
 end
 
--- local function autoThemeOptions(appearance)
---     if appearance:find("Dark") then
---         return {
---             win_opacity = 0.97,
---             win_background_blur = 15,
---         }
---     else
---         return {
---             win_opacity = 0.95,
---             win_background_blur = 20,
---         }
---     end
--- end
+local function autoThemeOptions()
+    local appearance = wezterm.gui.get_appearance()
+    if appearance:find("Dark") then
+        return {
+            win_opacity = 1,
+            win_blur = 10,
+            font_weight = "Light",
+        }
+    else
+        return {
+            win_opacity = 1,
+            win_blur = 0,
+            font_weight = "Regular",
+        }
+    end
+end
 
 -- A helper function for my fallback fonts
 local function font_with_fallback(name, params)
@@ -100,10 +103,10 @@ return {
     initial_rows = 26,
     initial_cols = 110,
     -- window_close_confirmation = "NeverPrompt",
-    -- window_background_opacity = autoThemeOptions(wezterm.gui.get_appearance()).win_opacity,
-    -- macos_window_background_blur = autoThemeOptions(wezterm.gui.get_appearance()).win_background_blur,
-    window_background_opacity = 0.97,
-    macos_window_background_blur = 10,
+    -- window_background_opacity = autoThemeOptions().win_opacity,
+    -- macos_window_background_blur = autoThemeOptions().win_blur,
+    -- window_background_opacity = 0.97,
+    -- macos_window_background_blur = 10,
     inactive_pane_hsb = {}, -- don't dim inactive panes
     send_composed_key_when_left_alt_is_pressed = false,
     send_composed_key_when_right_alt_is_pressed = false,
@@ -112,38 +115,38 @@ return {
     -- Font config
     cursor_thickness = 3,
     -- this is for FiraCode
-    -- font_size = 16,
-    -- line_height = 1.18,
+    font_size = 15,
+    line_height = 1.25,
     -- this is for Liga SFMono
     -- line_height = 1.21,
     -- this is for Monolisa
-    font_size = 15,
-    line_height = 1.12,
+    -- font_size = 15,
+    -- line_height = 1.12,
     term = "wezterm",
     -- font = wezterm.font("Monolisa Custom"),
     -- font = wezterm.font("Monolisa Custom", { weight = "Light" }),
     -- font = wezterm.font_with_fallback({ { family = "Monolisa Custom", weight = "Light" }, "nonicons" }),
-    font = wezterm.font_with_fallback({
-        { family = "Monolisa", weight = "Light" },
-        -- { family = "MonolisaCustom Nerd Font", weight = "Light" },
-        -- { family = "MonolisaLight Nerd Font" },
-        -- { family = "Liga SFMono Nerd Font", weight = "Light" },
-        -- { family = "MonolisaCustom Nerd Font", weight = "Regular" },
-        -- { family = "Symbols Nerd Font Mono", scale = 0.8 },
-    }),
+    -- font = wezterm.font_with_fallback({
+    --     { family = "Monolisa", weight = "Light" },
+    --     -- { family = "MonolisaCustom Nerd Font", weight = "Light" },
+    --     -- { family = "MonolisaLight Nerd Font" },
+    --     -- { family = "Liga SFMono Nerd Font", weight = "Light" },
+    --     -- { family = "MonolisaCustom Nerd Font", weight = "Regular" },
+    --     -- { family = "Symbols Nerd Font Mono", scale = 0.8 },
+    -- }),
     -- For Fira Code it is needed to set a rule so Wezterm does not use JetBrains Mono italics
-    -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Light" }),
+    font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
     -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
-    -- font_rules = {
-    -- 	{
-    -- 		italic = true,
-    -- 		-- font = font_with_fallback("FiraCode Nerd Font", { weight = "Light" }),
-    -- 		font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
-    -- 	},
-    -- },
+    font_rules = {
+        {
+            italic = true,
+            font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
+            -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
+        },
+    },
     -- For Fira Code and Monolisa:
     -- harfbuzz_features = { "zero", "ss04", "cv16", "cv14", "calt=0", "clig=0", "liga=0" },
-    -- harfbuzz_features = { "zero", "ss04", "cv16", "cv14" },
+    harfbuzz_features = { "zero", "ss04", "cv16", "cv14" },
     -- For Monolisa >= ==:
     -- harfbuzz_features = { "liga=0" },
 
@@ -158,7 +161,7 @@ return {
         ["Catppuccin Macchiato"] = catppuccinMacchiato,
         ["Catppuccin Frappe"] = catppuccinFrappe,
         ["Github Light"] = schemeGithubLight,
-        -- ["Monokai (base16)"] = schemeMonokaiPro,
+        ["Monokai (base16)"] = schemeMonokaiPro,
         ["tokyonight_moon"] = schemeMonokaiPro,
     },
     color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
