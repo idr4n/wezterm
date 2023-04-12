@@ -15,7 +15,7 @@ local schemeGithubLight = wezterm.get_builtin_color_schemes()["Github (base16)"]
 -- schemeGithubLight.cursor_border = "#9775FA"
 -- customize Monokai-pro
 local schemeMonokaiPro = wezterm.get_builtin_color_schemes()["Monokai (base16)"]
-schemeMonokaiPro.background = "#121212"
+schemeMonokaiPro.background = "#2A2A2A"
 -- schemeMonokaiPro.cursor_fg = "#2D2A2E"
 -- schemeMonokaiPro.cursor_bg = "#FFC22D"
 -- customize Tokyo-Moon
