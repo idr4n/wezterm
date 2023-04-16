@@ -18,10 +18,9 @@ local schemeMonokaiPro = wezterm.get_builtin_color_schemes()["Monokai (base16)"]
 schemeMonokaiPro.background = "#2A2A2A"
 -- schemeMonokaiPro.cursor_fg = "#2D2A2E"
 -- schemeMonokaiPro.cursor_bg = "#FFC22D"
--- customize Tokyo-Moon
-local schemeTokyoMoon = wezterm.get_builtin_color_schemes()["tokyonight_moon"]
-schemeTokyoMoon.background = "#1A1B26"
--- customize Catppuccin
+-- customize Monokai-pro
+local schemeGruvbox = wezterm.get_builtin_color_schemes()["Gruvbox Material (Gogh)"]
+schemeGruvbox.cursor_fg = "#282828"
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
 catppuccinMacchiato.split = "#000000"
 catppuccinMacchiato.tab_bar.background = catppuccinMacchiato.background
@@ -51,16 +50,17 @@ local function scheme_for_appearance(appearance)
         -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
         -- return "Monokai (base16)"
+        -- return "Gruvbox Material (Gogh)"
     else
         -- return "zenbones_light custom"
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        return "Github Light"
+        -- return "Github Light"
         -- return "Oxocarbon Dark"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
-        -- return "Catppuccin Frappe"
+        return "Catppuccin Frappe"
         -- return "Monokai (base16)"
         -- return "Catppuccin Macchiato"
     end
@@ -165,7 +165,7 @@ return {
         ["Catppuccin Frappe"] = catppuccinFrappe,
         ["Github Light"] = schemeGithubLight,
         ["Monokai (base16)"] = schemeMonokaiPro,
-        ["tokyonight_moon"] = schemeTokyoMoon,
+        ["Gruvbox Material (Gogh)"] = schemeGruvbox,
     },
     color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 }
