@@ -11,8 +11,8 @@ schemeZenbonesLight.cursor_bg = "#9775FA"
 -- customize GithubLight
 local schemeGithubLight = wezterm.get_builtin_color_schemes()["Github (base16)"]
 -- schemeGithubLight.cursor_fg = "#24292F"
--- schemeGithubLight.cursor_bg = "#9775FA"
--- schemeGithubLight.cursor_border = "#9775FA"
+schemeGithubLight.cursor_bg = "#9775FA"
+schemeGithubLight.cursor_border = "#9775FA"
 -- customize Monokai-pro
 local schemeMonokaiPro = wezterm.get_builtin_color_schemes()["Monokai (base16)"]
 schemeMonokaiPro.background = "#2A2A2A"
@@ -40,8 +40,8 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
-        -- return "zenbones_dark custom"
-        return "tokyonight_moon"
+        return "zenbones_dark custom"
+        -- return "tokyonight_moon"
         -- return "duskfox"
         -- return "nordfox"
         -- return "Rosé Pine (base16)"
@@ -56,11 +56,11 @@ local function scheme_for_appearance(appearance)
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        -- return "Github Light"
+        return "Github Light"
         -- return "Oxocarbon Dark"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
-        return "Catppuccin Frappe"
+        -- return "Catppuccin Frappe"
         -- return "Monokai (base16)"
         -- return "Catppuccin Macchiato"
     end
@@ -71,13 +71,13 @@ local function autoThemeOptions()
     if appearance:find("Dark") then
         return {
             win_opacity = 1,
-            win_blur = 10,
+            win_blur = 5,
             font_weight = "Light",
         }
     else
         return {
             win_opacity = 1,
-            win_blur = 0,
+            win_blur = 5,
             font_weight = "Regular",
         }
     end
