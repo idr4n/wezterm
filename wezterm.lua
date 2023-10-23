@@ -41,6 +41,7 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         return "zenbones_dark custom"
+        -- return "tokyonight_night"
         -- return "tokyonight_moon"
         -- return "duskfox"
         -- return "nordfox"
@@ -73,12 +74,19 @@ local function autoThemeOptions()
             win_opacity = 1,
             win_blur = 5,
             font_weight = "Light",
+            border_color = "#C093B7",
+            -- berder_width = "0.38cell",
+            -- berder_height = "0.15cell",
+            berder_width = 0,
+            berder_height = 0,
         }
     else
         return {
             win_opacity = 1,
             win_blur = 5,
             font_weight = "Regular",
+            border_color = "#C093B7",
+            berder_width = 0,
         }
     end
 end
@@ -103,6 +111,16 @@ return {
         top = "0.2cell",
         bottom = 0,
     },
+    window_frame = {
+        border_left_width = autoThemeOptions().berder_width,
+        border_right_width = autoThemeOptions().berder_width,
+        border_bottom_height = autoThemeOptions().berder_height,
+        border_top_height = autoThemeOptions().berder_height,
+        border_left_color = autoThemeOptions().border_color,
+        border_right_color = autoThemeOptions().border_color,
+        border_bottom_color = autoThemeOptions().border_color,
+        border_top_color = autoThemeOptions().border_color,
+    },
     initial_rows = 26,
     initial_cols = 110,
     -- window_close_confirmation = "NeverPrompt",
@@ -117,6 +135,7 @@ return {
 
     -- Font config
     cursor_thickness = 3,
+    default_cursor_style = "BlinkingBar",
     -- this is for FiraCode
     font_size = 15,
     line_height = 1.25,
@@ -139,11 +158,13 @@ return {
     -- }),
     -- For Fira Code it is needed to set a rule so Wezterm does not use JetBrains Mono italics
     font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
+    -- font = font_with_fallback("Iosevka SS04", { weight = "Regular" }),
     -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
     font_rules = {
         {
             italic = true,
             font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
+            -- font = font_with_fallback("Iosevka SS04", { weight = "Regular" }),
             -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
         },
     },
