@@ -73,6 +73,7 @@ local function autoThemeOptions()
         return {
             win_opacity = 1,
             win_blur = 5,
+            font = "Iosevka Custom Light Extended",
             font_weight = "Light",
             border_color = "#C093B7",
             -- berder_width = "0.38cell",
@@ -84,6 +85,7 @@ local function autoThemeOptions()
         return {
             win_opacity = 1,
             win_blur = 5,
+            font = "Iosevka Custom Extended",
             font_weight = "Regular",
             border_color = "#C093B7",
             berder_width = 0,
@@ -157,20 +159,21 @@ return {
     --     -- { family = "Symbols Nerd Font Mono", scale = 0.8 },
     -- }),
     -- For Fira Code it is needed to set a rule so Wezterm does not use JetBrains Mono italics
-    font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
+    -- font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
+    font = wezterm.font(autoThemeOptions().font),
     -- font = font_with_fallback("Iosevka SS04", { weight = "Regular" }),
     -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
-    font_rules = {
-        {
-            italic = true,
-            font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
-            -- font = font_with_fallback("Iosevka SS04", { weight = "Regular" }),
-            -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
-        },
-    },
+    -- font_rules = {
+    --     {
+    --         italic = true,
+    --         font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
+    --         -- font = font_with_fallback("Iosevka SS04", { weight = "Regular" }),
+    --         -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
+    --     },
+    -- },
     -- For Fira Code and Monolisa:
     -- harfbuzz_features = { "zero", "ss04", "cv16", "cv14", "calt=0", "clig=0", "liga=0" },
-    harfbuzz_features = { "zero", "ss04", "cv16", "cv14" },
+    -- harfbuzz_features = { "zero", "ss04", "cv16", "cv14" },
     -- For Monolisa >= ==:
     -- harfbuzz_features = { "liga=0" },
 
