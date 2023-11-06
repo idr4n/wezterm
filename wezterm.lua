@@ -18,7 +18,11 @@ local schemeMonokaiPro = wezterm.get_builtin_color_schemes()["Monokai (base16)"]
 schemeMonokaiPro.background = "#2A2A2A"
 -- schemeMonokaiPro.cursor_fg = "#2D2A2E"
 -- schemeMonokaiPro.cursor_bg = "#FFC22D"
--- customize Monokai-pro
+-- customize OneDark
+local schemeOneDark = wezterm.get_builtin_color_schemes()["OneDark (base16)"]
+schemeOneDark.background = "#1F2329"
+schemeOneDark.cursor_fg = "#1F2329"
+schemeOneDark.cursor_bg = "#FFC22D"
 local schemeGruvbox = wezterm.get_builtin_color_schemes()["Gruvbox Material (Gogh)"]
 schemeGruvbox.cursor_fg = "#282828"
 local catppuccinMacchiato = wezterm.get_builtin_color_schemes()["Catppuccin Macchiato"]
@@ -40,7 +44,8 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
-        return "zenbones_dark custom"
+        -- return "zenbones_dark custom"
+        return "OneDark Custom"
         -- return "tokyonight_night"
         -- return "tokyonight_moon"
         -- return "duskfox"
@@ -57,7 +62,8 @@ local function scheme_for_appearance(appearance)
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        return "Github Light"
+        -- return "Github Light"
+        return "One Light (base16)"
         -- return "Oxocarbon Dark"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
@@ -190,6 +196,7 @@ return {
         ["Github Light"] = schemeGithubLight,
         ["Monokai (base16)"] = schemeMonokaiPro,
         ["Gruvbox Material (Gogh)"] = schemeGruvbox,
+        ["OneDark Custom"] = schemeOneDark,
     },
     color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 }
