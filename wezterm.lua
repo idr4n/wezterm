@@ -10,6 +10,7 @@ schemeZenbonesLight.background = "#F8F6F5"
 schemeZenbonesLight.cursor_bg = "#9775FA"
 -- customize GithubLight
 local schemeGithubLight = wezterm.get_builtin_color_schemes()["Github (base16)"]
+schemeGithubLight.background = "#F4F4F4"
 -- schemeGithubLight.cursor_fg = "#24292F"
 schemeGithubLight.cursor_bg = "#9775FA"
 schemeGithubLight.cursor_border = "#9775FA"
@@ -45,7 +46,8 @@ catppuccinFrappe.tab_bar.active_tab.intensity = "Bold"
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         -- return "zenbones_dark custom"
-        return "OneDark Custom"
+        -- return "OneDark Custom"
+        return "OneDark (base16)"
         -- return "tokyonight_night"
         -- return "tokyonight_moon"
         -- return "duskfox"
@@ -62,8 +64,7 @@ local function scheme_for_appearance(appearance)
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        -- return "Github Light"
-        return "One Light (base16)"
+        return "Github Light"
         -- return "Oxocarbon Dark"
         -- return "Rosé Pine Moon (base16)"
         -- return "Rosé Pine Dawn (base16)"
