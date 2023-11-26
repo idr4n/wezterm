@@ -118,6 +118,7 @@ return {
     { key = "j", mods = "CMD", action = act.SendString("\x01\x2f") },
     { key = "n", mods = "CMD", action = act.SendString("\x01\x3b") },
     { key = "s", mods = "CMD", action = act.SendString("\x01\x73") },
+    { key = "S", mods = "CMD|SHIFT", action = act.SendString("\x01\x53") },
     { key = "J", mods = "CMD|SHIFT", action = act.SendString("\x01\x54") },
     { key = "t", mods = "CMD", action = act.SendString("\x01\x63") },
     { key = "Tab", mods = "CTRL", action = act.SendString("\x01\x09") },

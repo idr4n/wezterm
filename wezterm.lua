@@ -47,13 +47,12 @@ local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         -- return "zenbones_dark custom"
         -- return "OneDark Custom"
-        return "OneDark (base16)"
+        -- return "OneDark (base16)"
         -- return "tokyonight_night"
         -- return "tokyonight_moon"
         -- return "duskfox"
         -- return "nordfox"
-        -- return "Rosé Pine (base16)"
-        -- return "Rosé Pine Moon (base16)"
+        return "rose-pine-moon"
         -- return "Catppuccin Macchiato"
         -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
@@ -64,10 +63,9 @@ local function scheme_for_appearance(appearance)
         -- return "dawnfox"
         -- return "nordfox"
         -- return "tokyonight-moon"
-        return "Github Light"
+        -- return "Github Light"
         -- return "Oxocarbon Dark"
-        -- return "Rosé Pine Moon (base16)"
-        -- return "Rosé Pine Dawn (base16)"
+        return "OneDark (base16)"
         -- return "Catppuccin Frappe"
         -- return "Monokai (base16)"
         -- return "Catppuccin Macchiato"
@@ -144,9 +142,12 @@ return {
 
     -- Font config
     cursor_thickness = 3,
-    default_cursor_style = "BlinkingBar",
+    -- default_cursor_style = "BlinkingBar",
     -- this is for FiraCode
-    font_size = 15,
+    -- font_size = 15,
+    -- line_height = 1.25,
+    -- this is for Iosevka Custom Extended
+    font_size = 14,
     line_height = 1.25,
     -- this is for Liga SFMono
     -- line_height = 1.21,
