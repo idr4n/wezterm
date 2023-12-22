@@ -49,10 +49,10 @@ local function scheme_for_appearance(appearance)
         -- return "OneDark Custom"
         -- return "OneDark (base16)"
         -- return "tokyonight_night"
-        -- return "tokyonight_moon"
+        return "tokyonight_moon"
         -- return "duskfox"
         -- return "nordfox"
-        return "rose-pine-moon"
+        -- return "rose-pine-moon"
         -- return "Catppuccin Macchiato"
         -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
@@ -62,10 +62,12 @@ local function scheme_for_appearance(appearance)
         -- return "zenbones_light custom"
         -- return "dawnfox"
         -- return "nordfox"
-        -- return "tokyonight-moon"
+        return "tokyonight_moon"
+        -- return "tokyonight_night"
         -- return "Github Light"
         -- return "Oxocarbon Dark"
-        return "OneDark (base16)"
+        -- return "rose-pine-moon"
+        -- return "OneDark (base16)"
         -- return "Catppuccin Frappe"
         -- return "Monokai (base16)"
         -- return "Catppuccin Macchiato"
@@ -78,7 +80,9 @@ local function autoThemeOptions()
         return {
             win_opacity = 1,
             win_blur = 5,
-            font = "Iosevka Custom Light Extended",
+            -- font = "Iosevka Custom Light Extended",
+            font = "Monolisa",
+            -- font = "Operator Mono Lig",
             font_weight = "Light",
             border_color = "#C093B7",
             -- berder_width = "0.38cell",
@@ -90,8 +94,11 @@ local function autoThemeOptions()
         return {
             win_opacity = 1,
             win_blur = 5,
-            font = "Iosevka Custom Extended",
-            font_weight = "Regular",
+            -- font = "Iosevka Custom Extended",
+            font = "Monolisa",
+            -- font = "Operator Mono Lig",
+            -- font_weight = "Regular",
+            font_weight = "Light",
             border_color = "#C093B7",
             berder_width = 0,
         }
@@ -147,13 +154,16 @@ return {
     -- font_size = 15,
     -- line_height = 1.25,
     -- this is for Iosevka Custom Extended
-    font_size = 14,
-    line_height = 1.25,
+    -- font_size = 14,
+    -- line_height = 1.25,
     -- this is for Liga SFMono
     -- line_height = 1.21,
     -- this is for Monolisa
+    font_size = 13,
+    line_height = 1.15,
+    -- -- this is for Operator Mono
     -- font_size = 15,
-    -- line_height = 1.12,
+    -- line_height = 1.15,
     term = "wezterm",
     -- font = wezterm.font("Monolisa Custom"),
     -- font = wezterm.font("Monolisa Custom", { weight = "Light" }),
@@ -168,7 +178,7 @@ return {
     -- }),
     -- For Fira Code it is needed to set a rule so Wezterm does not use JetBrains Mono italics
     -- font = font_with_fallback("Fira Code", { weight = autoThemeOptions().font_weight }),
-    font = wezterm.font(autoThemeOptions().font),
+    font = wezterm.font(autoThemeOptions().font, { weight = autoThemeOptions().font_weight }),
     -- font = font_with_fallback("Iosevka SS04", { weight = "Regular" }),
     -- font = font_with_fallback("FiraCode Nerd Font", { weight = "Regular" }),
     -- font_rules = {
