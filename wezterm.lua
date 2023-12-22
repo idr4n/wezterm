@@ -141,11 +141,28 @@ return {
     -- window_background_opacity = autoThemeOptions().win_opacity,
     -- macos_window_background_blur = autoThemeOptions().win_blur,
     -- window_background_opacity = 0.97,
-    -- macos_window_background_blur = 10,
+    macos_window_background_blur = 10,
     inactive_pane_hsb = {}, -- don't dim inactive panes
     send_composed_key_when_left_alt_is_pressed = false,
     send_composed_key_when_right_alt_is_pressed = false,
     cursor_blink_rate = 0,
+
+    -- background = {
+    --     -- {
+    --     --     source = {
+    --     --         -- File = "/Users/iduran/Wallpapers-The-Ones/photo-1545917992-dea2d782ef46.jpeg",
+    --     --         File = "/Users/iduran/Wallpapers-The-Ones/photo-1513014939933-3b7e0cf15185.jpeg",
+    --     --     },
+    --     --     horizontal_align = "Center",
+    --     --     opacity = 0.8,
+    --     -- },
+    --     {
+    --         source = { Color = "#232136" },
+    --         width = "100%",
+    --         height = "100%",
+    --         opacity = 0.98,
+    --     },
+    -- },
 
     -- Font config
     cursor_thickness = 3,
