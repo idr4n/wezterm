@@ -50,10 +50,12 @@ local function scheme_for_appearance(appearance)
         -- return "OneDark (base16)"
         -- return "tokyonight_night"
         return "tokyonight_moon"
+        -- return "Kanagawa (Gogh)"
         -- return "duskfox"
         -- return "nordfox"
         -- return "rose-pine-moon"
         -- return "Catppuccin Macchiato"
+        -- return "Catppuccin Mocha"
         -- return "Oxocarbon Dark"
         -- return "Catppuccin Frappe"
         -- return "Monokai (base16)"
@@ -63,14 +65,17 @@ local function scheme_for_appearance(appearance)
         -- return "dawnfox"
         -- return "nordfox"
         return "tokyonight_moon"
+        -- return "Kanagawa (Gogh)"
         -- return "tokyonight_night"
         -- return "Github Light"
         -- return "Oxocarbon Dark"
         -- return "rose-pine-moon"
+        -- return "OneDark Custom"
         -- return "OneDark (base16)"
         -- return "Catppuccin Frappe"
         -- return "Monokai (base16)"
         -- return "Catppuccin Macchiato"
+        -- return "Catppuccin Mocha"
     end
 end
 
@@ -148,19 +153,23 @@ return {
     cursor_blink_rate = 0,
 
     -- background = {
-    --     -- {
-    --     --     source = {
-    --     --         -- File = "/Users/iduran/Wallpapers-The-Ones/photo-1545917992-dea2d782ef46.jpeg",
-    --     --         File = "/Users/iduran/Wallpapers-The-Ones/photo-1513014939933-3b7e0cf15185.jpeg",
-    --     --     },
-    --     --     horizontal_align = "Center",
-    --     --     opacity = 0.8,
-    --     -- },
     --     {
-    --         source = { Color = "#232136" },
+    --         source = {
+    --             File = "/Users/iduran/Wallpapers-Main-Selected/Abstract-Gradient-Blue-Layers-AI-Generated-4K-Wallpaper.jpg",
+    --         },
+    --         horizontal_align = "Center",
+    --         -- opacity = 0.8,
+    --     },
+    --     {
+    --         source = { Color = "#222436" }, -- tokyonight moon
+    --         -- source = { Color = "#232136" }, -- rose-pine
+    --         -- source = { Color = "#1F2329" }, -- onedark
+    --         -- source = { Color = "#303446" }, -- catppuccin frappe
+    --         -- source = { Color = "#24273A" }, -- catppuccin macchiato
+    --         -- source = { Color = "#1E1E2E" }, -- catppuccin mocha
     --         width = "100%",
     --         height = "100%",
-    --         opacity = 0.98,
+    --         opacity = 0.97,
     --     },
     -- },
 
