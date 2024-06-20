@@ -38,7 +38,7 @@ return {
         mods = "CTRL|SHIFT",
         action = wezterm.action_callback(function(win, pane)
             local newPane = pane:mux_pane()
-            newPane:split({ direction = "Left", size = 0.28 })
+            newPane:split({ direction = "Left", size = 0.36 })
             win:perform_action(act.ActivatePaneDirection("Right"), pane)
         end),
     },
@@ -117,8 +117,8 @@ return {
     -- Tmux bindings
     { key = "j", mods = "CMD", action = act.SendString("\x01\x2f") },
     { key = "n", mods = "CMD", action = act.SendString("\x01\x3b") },
-    { key = "s", mods = "CMD", action = act.SendString("\x01\x73") },
-    { key = "S", mods = "CMD|SHIFT", action = act.SendString("\x01\x53") },
+    { key = "s", mods = "CMD", action = act.SendString("\x01\x53") },
+    { key = "S", mods = "CMD|SHIFT", action = act.SendString("\x01\x73") },
     { key = "J", mods = "CMD|SHIFT", action = act.SendString("\x01\x54") },
     { key = "t", mods = "CMD", action = act.SendString("\x01\x63") },
     { key = "Tab", mods = "CTRL", action = act.SendString("\x01\x09") },
@@ -128,6 +128,7 @@ return {
     { key = "x", mods = "CMD", action = act.SendString("\x01\x26") },
     { key = "l", mods = "CMD", action = act.SendString("\x01\x5e") },
     { key = "z", mods = "CMD", action = act.SendString("\x01\x7a") },
+    { key = "p", mods = "CMD", action = act.SendString("\x01\x50") },
     -- select window 1-9
     { key = "1", mods = "CMD", action = act.SendString("\x01\x31") },
     { key = "2", mods = "CMD", action = act.SendString("\x01\x32") },
